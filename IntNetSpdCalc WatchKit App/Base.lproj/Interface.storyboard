@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--PickerScreenController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="PickerScreenController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="IntNetSpdCalc_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Select your speed in Mbps" numberOfLines="2" id="KM7-vf-H4C"/>
+                        <picker width="1" height="100" alignment="left" id="9Ld-LX-YAb">
+                            <connections>
+                                <action selector="chooseNum:" destination="AgC-eL-Hgc" id="mEl-ZR-OBs"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Button" id="rB2-JF-gEg">
+                            <connections>
+                                <action selector="sendNum" destination="AgC-eL-Hgc" id="IPk-NZ-7jb"/>
+                                <segue destination="cJV-37-Gk4" kind="modal" id="XbS-2t-j5o"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="changeScreen" destination="rB2-JF-gEg" id="HlW-j2-fjo"/>
+                        <outlet property="thePicker" destination="9Ld-LX-YAb" id="QKA-i4-eWQ"/>
+                        <outlet property="transmitNum" destination="rB2-JF-gEg" id="AR6-aw-e2Y"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--TableScreenController-->
+        <scene sceneID="fPO-mS-gfN">
+            <objects>
+                <controller identifier="TableScreenController" hidesWhenLoading="NO" id="cJV-37-Gk4" customClass="TableScreen" customModule="IntNetSpdCalc_WatchKit_Extension">
+                    <items>
+                        <label height="20" alignment="center" text="Selected Number" id="H5i-IF-c6R"/>
+                        <table alignment="left" id="p9Y-mp-if3">
+                            <items>
+                                <tableRow id="qih-1D-Jnd">
+                                    <group key="rootItem" width="1" height="150" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="o8N-l8-ziy"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="theTable" destination="o8N-l8-ziy" id="V4A-69-1Yw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="404" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +72,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="IntNetSpdCalc_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

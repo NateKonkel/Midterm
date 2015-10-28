@@ -20,6 +20,8 @@
 		6843BCF01BE156AC00BA80F8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843BCEF1BE156AC00BA80F8 /* ExtensionDelegate.swift */; };
 		6843BCF21BE156AC00BA80F8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843BCF11BE156AC00BA80F8 /* NotificationController.swift */; };
 		6843BCF41BE156AC00BA80F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6843BCF31BE156AC00BA80F8 /* Assets.xcassets */; };
+		6843BD041BE15B4A00BA80F8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843BD031BE15B4A00BA80F8 /* Singleton.swift */; settings = {ASSET_TAGS = (); }; };
+		6843BD081BE15EEB00BA80F8 /* TableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843BD071BE15EEB00BA80F8 /* TableScreen.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		6843BCF11BE156AC00BA80F8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		6843BCF31BE156AC00BA80F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6843BCF51BE156AC00BA80F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6843BD031BE15B4A00BA80F8 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		6843BD071BE15EEB00BA80F8 /* TableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				6843BCED1BE156AC00BA80F8 /* InterfaceController.swift */,
 				6843BCEF1BE156AC00BA80F8 /* ExtensionDelegate.swift */,
 				6843BCF11BE156AC00BA80F8 /* NotificationController.swift */,
+				6843BD031BE15B4A00BA80F8 /* Singleton.swift */,
+				6843BD071BE15EEB00BA80F8 /* TableScreen.swift */,
 				6843BCF31BE156AC00BA80F8 /* Assets.xcassets */,
 				6843BCF51BE156AC00BA80F8 /* Info.plist */,
 				6843BCEB1BE156AC00BA80F8 /* Supporting Files */,
@@ -307,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6843BD081BE15EEB00BA80F8 /* TableScreen.swift in Sources */,
 				6843BCF21BE156AC00BA80F8 /* NotificationController.swift in Sources */,
+				6843BD041BE15B4A00BA80F8 /* Singleton.swift in Sources */,
 				6843BCF01BE156AC00BA80F8 /* ExtensionDelegate.swift in Sources */,
 				6843BCEE1BE156AC00BA80F8 /* InterfaceController.swift in Sources */,
 			);
@@ -505,6 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NateKonkel.IntNetSpdCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -516,6 +525,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NateKonkel.IntNetSpdCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
